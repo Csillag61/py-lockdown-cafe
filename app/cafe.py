@@ -7,6 +7,10 @@ class Cafe:
         self.name = name
 
     def visit_cafe(self, visitor: dict) -> str:
+        # Check if visitor has a name
+        if "name" not in visitor:
+            raise ValueError("Visitor must have a name")
+        
         # Check if visitor is vaccinated
         if "vaccine" not in visitor:
             raise NotVaccinatedError(visitor["name"])
