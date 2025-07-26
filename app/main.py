@@ -4,7 +4,7 @@ from app.errors import VaccineError, NotWearingMaskError
 def go_to_cafe(friends: list, cafe: Cafe):
     masks_needed = 0
     vaccination_issues = 0
-    
+
     # Check all friends first
     for visitor in friends:
         try:
